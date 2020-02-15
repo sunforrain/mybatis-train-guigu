@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.mybatis.dao.EmployeeMapper">
+<!-- 
+namespace:名称空间;指定为接口的全类名
+id：唯一标识
+resultType：返回值类型
+#{id}：从传递过来的参数中取出id值
+
+public Employee getEmpById(Integer id);
+ -->
+	<select id="getEmpById" resultType="com.atguigu.mybatis.bean.Employee">
+		select id,last_name lastName,email,gender from tbl_employee where id = #{id}
+	</select>
+
+	<!--视频83, PageHelpler分页插件使用-->
+	<!--public List<Employee> getEmps();  -->
+	<select id="getEmps" resultType="com.atguigu.mybatis.bean.Employee">
+		select id,last_name lastName,email,gender from tbl_employee
+	</select>
+
+	<!--视频84 批量_BatchExecutor&Spring中配置批量sqlSession-->
+	<!--public Long addEmp(Employee employee);  -->
+	<insert id="addEmp" useGeneratedKeys="true" keyProperty="id">
+		insert into tbl_employee(last_name,email,gender)
+		values(#{lastName},#{email},#{gender})
+	</insert>
+
+	<!-- 视频86 mybatis调用存储过程
+		create or replace procedure
+			hello_test(
+				p_start in int,p_end in int,p_count out int,p_emps out sys_refcursor
+			) as
+		begin
+			select count(*) into p_count from employees;
+			open p_emps for
+				select * from (select rownum rn, e.* from employees e where rownum <= p_end)
+					where rn>=p_start;
+		end hello_test;
+	-->
+	<!--
+	public void getPageByProcedure();
+	1、使用select标签定义调用存储过程
+	2、statementType="CALLABLE":表示要调用存储过程
+	3、{call procedure_name(params)}
+	4、#{参数名,mode=IN/OUT,
+		jdbcType=查enum JDBCType implements SQLType,
+		javaType=返回参数是个指针,返回是个集合,集合类型要定义ResultSet,
+		resultMap=因为数据表字段与实体类参数名不一致}
+	-->
+	<select id="getPageByProcedure" statementType="CALLABLE" databaseId="oracle">
+		{call hello_test(
+			#{start,mode=IN,jdbcType=INTEGER},
+			#{end,mode=IN,jdbcType=INTEGER},
+			#{count,mode=OUT,jdbcType=INTEGER},
+			#{emps,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=PageEmp}
+		)}
+	</select>
+	<resultMap type="com.atguigu.mybatis.bean.Employee" id="PageEmp">
+		<id column="EMPLOYEE_ID" property="id"/>
+		<result column="LAST_NAME" property="lastName"/>
+		<result column="EMAIL" property="email"/>
+	</resultMap>
+
+	<!--视频87 typeHandler_mybatis中枚举类型的默认处理和更改-->
+	<!--public Long addEmp(Employee employee);  -->
+	<insert id="addEmpForEnum" useGeneratedKeys="true" keyProperty="id">
+		insert into tbl_employee(last_name,email,gender,emp_status)
+		values(#{lastName},#{email},#{gender},#{empStatus})
+	</insert>
+</mapper>
