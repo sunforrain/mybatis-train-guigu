@@ -31,12 +31,13 @@ public Employee getEmpById(Integer id);
 	</select>
 
 	<!--视频24 参数处理 #与$的区别-->
+	<!--视频21 参数传递,多个参数用map-->
  	<!-- public Employee getEmpByMap(Map<String, Object> map); -->
  	<select id="getEmpByMap" resultType="com.atguigu.mybatis.bean.Employee">
  		select * from ${tableName} where id=${id} and last_name=#{lastName}
  	</select>
 
-	<!--视频21 参数传递,多个参数用map-->
+	<!--视频20 参数传递,多个参数用@Param-->
  	<!--  public Employee getEmpByIdAndLastName(Integer id,String lastName);-->
  	<select id="getEmpByIdAndLastName" resultType="com.atguigu.mybatis.bean.Employee">
  		select * from tbl_employee where id = #{id} and last_name=#{lastName}

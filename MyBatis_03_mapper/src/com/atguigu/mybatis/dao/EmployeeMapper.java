@@ -21,7 +21,8 @@ public interface EmployeeMapper {
 
 	// 视频26 select返回list
 	public List<Employee> getEmpsByLastNameLike(String lastName);
-	
+
+	// 视频21 参数传递,多个参数用map
 	public Employee getEmpByMap(Map<String, Object> map);
 
 	// 视频20 参数传递,多个参数用@Param

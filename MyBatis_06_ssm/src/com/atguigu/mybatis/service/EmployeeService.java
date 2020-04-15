@@ -19,12 +19,10 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeMapper employeeMapper;
 
-	//视频84 批量_BatchExecutor&Spring中配置批量sqlSession
 	@Autowired
 	private SqlSession sqlSession;
 	
 	public List<Employee> getEmps(){
-
 		return employeeMapper.getEmps();
 	}
 

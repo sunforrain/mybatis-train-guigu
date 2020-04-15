@@ -1,8 +1,5 @@
 package com.atguigu.mybatis.dao;
 
-import org.apache.ibatis.executor.Executor;
-import org.apache.ibatis.executor.parameter.ParameterHandler;
-import org.apache.ibatis.executor.resultset.ResultSetHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.plugin.*;
 

@@ -53,7 +53,8 @@
 		<id column="dept_name" property="departmentName"/>
 		<collection property="emps" 
 			select="com.atguigu.mybatis.dao.EmployeeMapperPlus.getEmpsByDeptId"
-			column="{deptId=id}" fetchType="lazy"></collection>
+			column="{deptId=id}" fetchType="lazy">
+		</collection>
 	</resultMap>
 	<!-- public Department getDeptByIdStep(Integer id); -->
 	<select id="getDeptByIdStep" resultMap="MyDeptStep">

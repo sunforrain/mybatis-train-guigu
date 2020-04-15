@@ -53,7 +53,6 @@ public class MyFirstPluginPlus implements Interceptor{
 	 */
 	@Override
 	public Object plugin(Object target) {
-		// TODO Auto-generated method stub
 		//我们可以借助Plugin的wrap方法来使用当前Interceptor包装我们目标对象
 		System.out.println("MyFirstPlugin...plugin:mybatis将要包装的对象"+target);
 		Object wrap = Plugin.wrap(target, this);
