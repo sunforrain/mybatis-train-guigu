@@ -36,6 +36,8 @@
 			<result column="gender" property="gender"/>
 		</collection>
 	</resultMap>
+
+	<!--视频34 嵌套结果集,使用collection标签定义关联的集合类型的属性封装规则-->
 	<!-- public Department getDeptByIdPlus(Integer id); -->
 	<select id="getDeptByIdPlus" resultMap="MyDept">
 		SELECT d.id did,d.dept_name dept_name,
@@ -51,11 +53,12 @@
 	<resultMap type="com.atguigu.mybatis.bean.Department" id="MyDeptStep">
 		<id column="id" property="id"/>
 		<id column="dept_name" property="departmentName"/>
-		<collection property="emps" 
+		<collection property="emps"
 			select="com.atguigu.mybatis.dao.EmployeeMapperPlus.getEmpsByDeptId"
 			column="{deptId=id}" fetchType="lazy">
 		</collection>
 	</resultMap>
+	<!--视频35 关联查询_collection分步查询&延迟加载-->
 	<!-- public Department getDeptByIdStep(Integer id); -->
 	<select id="getDeptByIdStep" resultMap="MyDeptStep">
 		select id,dept_name from tbl_dept where id=#{id}

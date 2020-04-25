@@ -156,6 +156,7 @@
 	 		</case>
 	 	</discriminator>
 	 </resultMap>
+	<!-- 视频37 =======================鉴别器============================ -->
 	<!--  public Employee getEmpDisByIdStep(Integer id);-->
 	<select id="getEmpDisByIdStep" resultMap="MyEmpDis">
 		select * from tbl_employee where id=#{id}

@@ -2,7 +2,7 @@ package com.atguigu.mybatis.bean;
 
 import org.apache.ibatis.type.Alias;
 
-@Alias("emp")// typeAliases别名处理器
+@Alias("emp")// 视频9 typeAliases别名处理器
 public class Employee {
 	
 	private Integer id;
