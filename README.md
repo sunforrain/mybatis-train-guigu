@@ -65,34 +65,37 @@ myBatis的代码,仅供练习
 #### 57 : MyBatis_缓存_缓存原理图示, 见课件
 #### 58 : MyBatis_缓存_第三方缓存整合原理&ehcache适配包下载,见课件
 #### 59 : MyBatis_缓存_MyBatis整合ehcache&总结
-
-### 60 : MyBatis_整合Spring_整合适配包下载
-### 61 : MyBatis_整合Spring_所有需要的jar包导入
-### 62 : MyBatis_整合Spring_引入MyBatis之前的配置
-### 63 : MyBatis_整合Spring_SpringMVC配置文件编写
-### 64 : MyBatis_整合Spring_Spring配置文件编写
-### 65 : MyBatis_整合Spring_Spring整合MyBatis关键配置
-### 66 : MyBatis_整合Spring_整合测试
-### 67 : MyBatis_逆向工程_mbg简介
-### 68 : MyBatis_逆向工程_mgb配置文件编写
-### 69 : MyBatis_逆向工程_使用mbg逆向生成所有代码及配置
-### 70 : MyBatis_逆向工程_测试简单查询&amp;amp;测试带条件复杂查询
-### 71 : MyBatis_运行原理_框架分层架构
-### 72 : MyBatis_运行原理_调试前注意
-### 73 : MyBatis_运行原理_SQLSessionFactory的初始化
-### 74 : MyBatis_运行原理_openSession获取SqlSession对象
-### 75 : MyBatis_运行原理_getMapper获取到接口的代理对象
-### 76 : MyBatis_运行原理_查询实现
-### 77 : MyBatis_运行原理_查询流程总结
-### 78 : MyBatis_运行原理_MyBatis原理总结
-### 79 : MyBatis_插件_插件原理
-### 80 : MyBatis_插件_插件编写&amp;amp;单个插件原理
-### 81 : MyBatis_插件_多个插件运行流程
-### 82 : MyBatis_插件_开发插件
-### 83 : MyBatis_扩展_分页_PageHelpler分页插件使用
-### 84 : MyBatis_扩展_批量_BatchExecutor&amp;amp;Spring中配置批量sqlSession
-### 85 : MyBatis_扩展_存储过程_oracle中创建一个带游标的存储过程
-### 86 : MyBatis_扩展_存储过程_MyBatis调用存储过程
-### 87 : MyBatis_扩展_自定义类型处理器_MyBatis中枚举类型的默认处理
-### 88 : MyBatis_扩展_自定义类型处理器_使用自定义的类型处理器处理枚举类型
-### 89 : MyBatis_运行原理_查询实现
+### MyBatis_06_ssm
+#### 60 : MyBatis_整合Spring_整合适配包下载,见课件
+#### 61 : MyBatis_整合Spring_所有需要的jar包导入,见课件
+#### 62 : MyBatis_整合Spring_引入MyBatis之前的配置,见课件
+#### 63 : MyBatis_整合Spring_SpringMVC配置文件编写,见课件
+#### 64 : MyBatis_整合Spring_Spring配置文件编写,见课件
+#### 65 : MyBatis_整合Spring_Spring整合MyBatis关键配置,见课件
+#### 66 : MyBatis_整合Spring_整合测试,见课件
+### MyBatis_07_mbg
+#### 67 : MyBatis_逆向工程_mbg简介,见课件
+#### 68 : MyBatis_逆向工程_mgb配置文件编写,见课件
+#### 69 : MyBatis_逆向工程_使用mbg逆向生成所有代码及配置
+#### 70 : MyBatis_逆向工程_测试简单查询&测试带条件复杂查询
+### 脑图
+#### 71 : MyBatis_运行原理_框架分层架构
+#### 72 : MyBatis_运行原理_调试前注意
+#### 73 : MyBatis_运行原理_SQLSessionFactory的初始化
+#### 74 : MyBatis_运行原理_openSession获取SqlSession对象
+#### 75 : MyBatis_运行原理_getMapper获取到接口的代理对象
+#### 76 : MyBatis_运行原理_查询实现
+#### 77 : MyBatis_运行原理_查询流程总结
+#### 78 : MyBatis_运行原理_MyBatis原理总结
+#### 79 : MyBatis_插件_插件原理
+#### 80 : MyBatis_插件_插件编写&amp;amp;单个插件原理
+#### 81 : MyBatis_插件_多个插件运行流程
+#### 82 : MyBatis_插件_开发插件
+### mybatis_11_other
+#### 83 : MyBatis_扩展_分页_PageHelpler分页插件使用
+#### 84 : MyBatis_扩展_批量_BatchExecutor&Spring中配置批量sqlSession, 见MyBatis_06_ssm
+#### 85 : MyBatis_扩展_存储过程_oracle中创建一个带游标的存储过程, 见课件
+#### 86 : MyBatis_扩展_存储过程_MyBatis调用存储过程
+#### 87 : MyBatis_扩展_自定义类型处理器_MyBatis中枚举类型的默认处理
+#### 88 : MyBatis_扩展_自定义类型处理器_使用自定义的类型处理器处理枚举类型
+#### 89 : MyBatis_运行原理_查询实现
